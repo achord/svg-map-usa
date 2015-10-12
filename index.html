@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>State Map</title>
+	<link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+	<div class="StateMap">
+		<div class="state-container">
+			<i id="marker" class="icon-marker"></i>
+			<img class="icon-state icon-state-la" src="assets/la.svg" alt="Louisiana">
+		</div>
+		
+		<span id="lat"></span>
+		<span id="long"></span>					
+	</div>
+
+	<script>
+		window.onload = function () {
+		   // http://www.mapcoordinates.net/en
+		   // set marker for map graphic
+		   //setMarker (29.9510658, -90.0715323);     // NOLA
+
+		   // setMarker (32.99945001,-94.010009775);  // Texarkana
+		   // setMarker(29.18933394, -90.05699158);   // Elmers
+		    setMarker(29.16535312, -89.26322937);   // pilotTown
+		   // setMarker(29.69371778,-93.80688386);    // bot-left Or
+		   // setMarker(30.99261831, -89.73770142);   // angie
+		   // setMarker (30.25927581,-89.94930621);   // Lacombe
+
+
+		};
+	</script>	
+
+	<script type="text/javascript" src="js/stateMap.js"></script>
+
+</body>
+</html>

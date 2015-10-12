@@ -1,0 +1,32 @@
+/*StateMap CSS*/
+body{
+	padding: 100px;
+	font-family:'futura', futura, century gothic, arial , helvetica, sans-serif;
+}
+
+.state-container{
+	width:  173px;
+	height: 160px;
+	background:#B1F2FC;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+.icon-state{
+	
+}
+.icon-state-la{
+	border: 1px solid red;
+}
+
+.icon-marker{
+	width:  4px;
+	height: 4px;
+	border-radius: 50%;
+	background:tomato;
+	display: block;
+	position: absolute;
+/*	top:  151px;
+	left: 158px;*/
+}
