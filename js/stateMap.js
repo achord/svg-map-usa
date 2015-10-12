@@ -3,6 +3,7 @@
 // Resources
 // States : http://libremap.org/data/boundary/
 // LA Coords VIA : https://www.flickr.com/places/info/2347577
+// Remote https://github.com/achord/svg-state-map.git
 
 var LA = {l: -94.0434, b: 28.9287, r: -88.8165, t: 33.0197}
 
