@@ -35,8 +35,8 @@ function setMarker(el, lat, long){
   var longPx = -(left - long);
   //console.log("latPx, longPx: " + latPx, longPx);
 
-  var markerTop = Math.round ( (latPx / height) * moduleHeight ) -1 ; // -31 offset top by marker height
-  var markerLeft = Math.round( (longPx / width) * moduleWidth ) -1  ; // -17 offset left by marker width
+  var markerTop = Math.round ( (latPx / height) * moduleHeight ) -3 ; // -31 offset top by marker height
+  var markerLeft = Math.round( (longPx / width) * moduleWidth )  -3  ; // -17 offset left by marker width
 
   console.log(markerTop, markerLeft);
 

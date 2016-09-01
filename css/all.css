@@ -20,10 +20,10 @@ body{
 }
 
 .icon-marker{
-	width:  2px;
-	height: 2px;
+	width:  6px;
+	height: 6px;
 	border-radius: 50%;
-	background:red;
+	background:orange;
 	display: block;
 	position: absolute;
 	z-index: 200;
