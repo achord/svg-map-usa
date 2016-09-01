@@ -5,12 +5,12 @@ body{
 }
 
 .map-container{
-	width:800px ;
+	width:1000px ;
 	height: auto;
-	background:#ddd;
+	/*background:#eee*/;
 	position: relative;
 	padding: 0;
-	margin: 25px ;
+	margin: 50px auto;
 	line-height: 0;
 }
 
