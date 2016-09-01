@@ -1,33 +1,32 @@
 /*StateMap CSS*/
 body{
-	padding: 100px;
-	font-family:'futura', futura, century gothic, arial , helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
-.state-container{
-	width:  100px;
-	background:#B1F2FC;
+.map-container{
+	width:2000px ;
+	height: auto;
+	background:#ddd;
 	position: relative;
 	padding: 0;
-	margin: 0;
+	margin: 25px ;
 	line-height: 0;
 }
 
-.icon-state{
-	
-}
-.icon-state-la{
-	/*border: 1px solid red;*/
-	background:#000;
+.icon-map{
+	width:100%;
+	height: auto;
 }
 
 .icon-marker{
-	width:  4px;
-	height: 4px;
+	width:  6px;
+	height: 6px;
 	border-radius: 50%;
-	background:tomato;
+	background:red;
 	display: block;
 	position: absolute;
+	z-index: 200;
 /*	top:  151px;
 	left: 158px;*/
 }
