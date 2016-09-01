@@ -1,7 +1,8 @@
 // Map Feature w mapMarker on SVG from LAT. and LONG.
 // Remote https://github.com/achord/svg-usa-map.git
-// gps-coordinates.net
+// Resources : gps-coordinates.net
 // t: 49.3931, r: -66.95, b: 24.545874, l: -124.75
+
 // Bounding Box must be exact in accordance with SVG in use. Also keep in mind the projection of the map. E.g. Mercator(Google maps)
 var USA = {t: 51.8, r: -66.95, b: 24.639528, l: -124.75};
 
@@ -12,9 +13,9 @@ function setMarkers(){
   });
 
 }
-function setMarker(el, lat, long){
-  // Size in px of height and width
-  // TODO Convert to %
+function setMarker(el, lat, long){  
+
+  // Size in px of height and width // TODO Convert to %
   var moduleWidth = document.getElementById('map-container').offsetWidth; // get width from css or from calculated
   var moduleHeight = document.getElementById('map-container').offsetHeight;
 
@@ -32,14 +33,11 @@ function setMarker(el, lat, long){
   var markerTop = Math.round ( (latPx / height) * moduleHeight ) -3 ; // offset to center marker
   var markerLeft = Math.round( (longPx / width) * moduleWidth )  -3  ; // offset to center marker
 
-  console.log(markerTop, markerLeft);
-
   //Set pos within div
   el.style.top  = markerTop + "px";
   el.style.left = markerLeft + "px";
 
 }
-
 
 window.onload = function () {
  // set markers for map graphic
