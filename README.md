@@ -1,4 +1,4 @@
-# svg-state-maps
+# SVG  - United States Map
 
 ### This is the initial commit. Not much going on yet. 
 
