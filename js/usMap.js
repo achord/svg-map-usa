@@ -8,8 +8,7 @@ var USA = {t: 51.8, r: -66.95, b: 24.639528, l: -124.75};
 function setMarkers(){
   var marker = document.querySelectorAll('.icon-marker');
   marker.forEach(function (el) {
-      //return el.style.backgroundColor = 'lime';
-      setMarker(el, el.dataset.lat, el.dataset.lng);
+    setMarker(el, el.dataset.lat, el.dataset.lng);
   });
 
 }
@@ -18,7 +17,6 @@ function setMarker(el, lat, long){
   // TODO Convert to %
   var moduleWidth = document.getElementById('map-container').offsetWidth; // get width from css or from calculated
   var moduleHeight = document.getElementById('map-container').offsetHeight;
-  //console.log("m height, m width: " + moduleHeight, moduleWidth);
 
   // Coordinate Bounding Box for LA
   var top    =  USA.t;
@@ -29,14 +27,10 @@ function setMarker(el, lat, long){
   // Coordinate difference  
   var width  = (right - left);
   var height = (top - bottom) ;
-  //console.log("height, width: " + height, width);
-  
   var latPx = (top - lat);
   var longPx = -(left - long);
-  //console.log("latPx, longPx: " + latPx, longPx);
-
-  var markerTop = Math.round ( (latPx / height) * moduleHeight ) -3 ; // -31 offset top by marker height
-  var markerLeft = Math.round( (longPx / width) * moduleWidth )  -3  ; // -17 offset left by marker width
+  var markerTop = Math.round ( (latPx / height) * moduleHeight ) -3 ; // offset to center marker
+  var markerLeft = Math.round( (longPx / width) * moduleWidth )  -3  ; // offset to center marker
 
   console.log(markerTop, markerLeft);
 
@@ -44,10 +38,10 @@ function setMarker(el, lat, long){
   el.style.top  = markerTop + "px";
   el.style.left = markerLeft + "px";
 
- }
+}
 
 
- window.onload = function () {
-       // set markers for map graphic
-      setMarkers();
-    };
+window.onload = function () {
+ // set markers for map graphic
+ setMarkers();
+};
