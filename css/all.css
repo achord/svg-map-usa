@@ -5,7 +5,7 @@ body{
 }
 
 .map-container{
-	width:1000px ;
+	width:80% ;
 	height: auto;
 	background:#eee;
 	position: relative;

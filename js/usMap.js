@@ -38,18 +38,27 @@ function setMarker(el, lat, long){
   // Coordinate difference  
   var width  = (right - left);
   var height = (top - bottom) ;
+
+  //Convert to pixels
   var latPx = (top - lat);
   var longPx = -(left - long);
-  console.log("height dif: "+top, bottom, height);
+
+
+  //console.log("height dif: "+top, bottom, height);
 
   //var markerTop = Math.round ( (latPx / height) * moduleHeight ) - ( markerHeight / 2); // offset to center marker
   //var markerLeft = Math.round( (longPx / width) * moduleWidth )  - ( markerWidth / 2);  // offset to center marker
-  var markerTop = ( (latPx / height) * moduleHeight ) - ( markerHeight / 2); // offset to center marker
-  var markerLeft = ( (longPx / width) * moduleWidth )  - ( markerWidth / 2);  // offset to center marker
+  
+  //var markerTop = ( (latPx / height) * moduleHeight ) - ( markerHeight / 2); // offset to center marker
+  var markerLeft = ( (longPx / width) * 100 ) ;  // offset to center marker
+
+  console.log(latPx, height, moduleHeight);
+  var markerTop = ( (latPx / height) * 100) ;
+
 
   //Set pos within div
-  el.style.top  = markerTop + "px";
-  el.style.left = markerLeft + "px";
+  el.style.top  = markerTop + "%";
+  el.style.left = markerLeft + "%";
 
 }
 
