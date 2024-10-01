@@ -1,31 +1,27 @@
 /*StateMap CSS*/
-body{
-	margin: 0;
-	padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.map-container{
-	width:80% ;
-	height: auto;
-	background:#eee;
-	position: relative;
-	padding: 0;
-	margin: 50px auto;
-	line-height: 0;
+.map-container {
+  width: 80%;
+  height: auto;
+  background: #eee;
+  position: relative;
+  padding: 0;
+  margin: 50px auto;
+  line-height: 0;
 }
 
-.icon-map{
-	width:100%;
-	height: auto;
+.icon-map {
+  width: 100%;
+  height: auto;
 }
 
-.icon-marker{
-	width:  4px;
-	height: 4px;
-	border-radius: 50%;
-	background:red;
-	display: block;
-	position: absolute;
-	z-index: 200;
-	opacity:.5;
+.icon-marker {
+  width: 14px;
+  height: auto;
+  display: block;
+  position: absolute;
 }

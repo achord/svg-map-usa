@@ -5,64 +5,61 @@
 
 // Bounding Box must be exact in accordance with SVG in use. Also keep in mind the projection of the map. E.g. Mercator(Google maps)
 var usa = {
-  t: 50.2,
+  t: 49.3931,
   r: -66.95,
-  b: 24.7,
-  l: -124.75
-};
-
-
-function setMarkers(){
-  var marker = document.querySelectorAll('.icon-marker');
-  marker.forEach(function (el) {
-    setMarker(el, el.dataset.lat, el.dataset.lng);
-  });
-
+  b: 24.545874,
+  l: -124.75,
 }
-function setMarker(el, lat, long){  
 
-  // Size in px of height and width // TODO Convert to %
-  var moduleWidth = document.getElementById('map-container').offsetWidth; // get width from css or from calculated
-  var moduleHeight = document.getElementById('map-container').offsetHeight;
+function setMarkers() {
+  var marker = document.querySelectorAll('.icon-marker')
+  marker.forEach(function (el) {
+    setMarker(el, el.dataset.lat, el.dataset.lng)
+  })
+}
 
-  // Coordinate Bounding Box for USA
-  var top    =  usa.t;
-  var right  =  usa.r;
-  var bottom =  usa.b;
-  var left   =  usa.l;
+function setMarker(el, lat, long) {
+  var moduleWidth = document.getElementById('map-container').offsetWidth
+  var moduleHeight = document.getElementById('map-container').offsetHeight
 
-  // Offset marker for centering
-  var markerHeight = el.offsetHeight;
-  var markerWidth = el.offsetWidth;
+  var top = usa.t
+  var right = usa.r
+  var bottom = usa.b
+  var left = usa.l
 
-  // Coordinate difference  
-  var width  = (right - left);
-  var height = (top - bottom) ;
+  var markerHeight = el.offsetHeight
+  var markerWidth = el.offsetWidth
 
-  //Convert to pixels
-  var latPx = (top - lat);
-  var longPx = -(left - long);
+  var width = right - left
+  var height = top - bottom
 
+  // Apply Mercator projection to latitude
+  var mercatorLat = Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360))
+  var mercatorTop = Math.log(Math.tan(Math.PI / 4 + (top * Math.PI) / 360))
+  var mercatorBottom = Math.log(
+    Math.tan(Math.PI / 4 + (bottom * Math.PI) / 360)
+  )
 
-  //console.log("height dif: "+top, bottom, height);
+  // Normalize latitude and longitude within the bounding box
+  var latNormalized =
+    (mercatorTop - mercatorLat) / (mercatorTop - mercatorBottom)
+  var longNormalized = (long - left) / width
 
-  //var markerTop = Math.round ( (latPx / height) * moduleHeight ) - ( markerHeight / 2); // offset to center marker
-  //var markerLeft = Math.round( (longPx / width) * moduleWidth )  - ( markerWidth / 2);  // offset to center marker
-  
-  //var markerTop = ( (latPx / height) * moduleHeight ) - ( markerHeight / 2); // offset to center marker
-  var markerLeft = ( (longPx / width) * 100 ) ;  // offset to center marker
+  // Convert normalized values to percentages
+  var markerTop = latNormalized * 100
+  var markerLeft = longNormalized * 100
 
-  console.log(latPx, height, moduleHeight);
-  var markerTop = ( (latPx / height) * 100) ;
+  // Adjust for marker dimensions to place the bottom of the marker at the coordinates
+  var adjustedMarkerTop = markerTop - (markerHeight / moduleHeight) * 100
+  var adjustedMarkerLeft = markerLeft - (markerWidth / moduleWidth) * 50
 
-
-  //Set pos within div
-  el.style.top  = markerTop + "%";
-  el.style.left = markerLeft + "%";
-
+  // Set position within the map container
+  el.style.top = adjustedMarkerTop + '%'
+  el.style.left = adjustedMarkerLeft + '%'
+  el.style.position = 'absolute' // Ensure the marker is positioned absolutely
 }
 
 window.onload = function () {
- // set markers for map graphic
- setMarkers();
-};
+  // set markers for map graphic
+  setMarkers()
+}
