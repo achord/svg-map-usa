@@ -1,8 +1,9 @@
 # Simple SVG Map - United States
 
-- Plot multiple markers for the 48 contiguous U.S. states using latitude and longitude coordinates.
+- Plot multiple markers for the 48 contiguous U.S. states using latitude and longitude coordinates
+- Utilize vanilla javascript and SVG files instead of a map API
 - Accurately adjust for the mercator projection
-- It utilizes vanilla javascript and SVG files instead of a map API.
+
 
 ```
 <!-- New Orleans -->
