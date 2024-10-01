@@ -49,13 +49,14 @@ function setMarker(el, lat, long) {
   var markerTop = latNormalized * 100
   var markerLeft = longNormalized * 100
 
-  // Adjust for marker dimensions to center the marker
-  var adjustedMarkerTop = markerTop - (markerHeight / moduleHeight) * 50
+  // Adjust for marker dimensions to place the bottom of the marker at the coordinates
+  var adjustedMarkerTop = markerTop - (markerHeight / moduleHeight) * 100
   var adjustedMarkerLeft = markerLeft - (markerWidth / moduleWidth) * 50
 
   // Set position within the map container
   el.style.top = adjustedMarkerTop + '%'
   el.style.left = adjustedMarkerLeft + '%'
+  el.style.position = 'absolute' // Ensure the marker is positioned absolutely
 }
 
 window.onload = function () {
