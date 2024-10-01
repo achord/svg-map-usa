@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>US Map</title>
-	<link rel="stylesheet" href="css/all.css">
-	<meta name="description" content="An SVG map that plots markers via coordinates">
-	<meta name="keywords" content="usa, map, svg, coordinates, markers, plot, plotter">
-	<meta name="author" content="Steven Achord">
-	<!-- http://github.com/achord -->
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>US Map</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <meta
+      name="description"
+      content="An SVG map that plots markers via coordinates"
+    />
+    <meta
+      name="keywords"
+      content="usa, map, svg, coordinates, markers, plot, plotter"
+    />
+    <meta name="author" content="Steven Achord" />
+    <!-- http://github.com/achord -->
+  </head>
 
-<body>
-	<div class="Map">
-		<div id="map-container" class="map-container">
-			<!-- New Orleans -->
-			<i class="icon-marker" data-lat="29.9510658" data-lng="-90.0715323"></i>
-			<!-- Miami -->
-			<i class="icon-marker" data-lat="25.775161" data-lng="-80.211182"></i>
-			<!-- Provo Utah -->
-			<i class="icon-marker" data-lat="40.245992" data-lng="-111.697998"></i>
-			<!-- 4 corners -->               
-			<i class="icon-marker" data-lat="37.000359" data-lng="-109.050293"></i>
-			<!-- middle of nowhere Kansas -->
-			<i class="icon-marker" data-lat="38.4126322" data-lng="-102.8199814"></i>
-			<!-- San Diego -->			 
-			<i class="icon-marker" data-lat="32.583849" data-lng="-117.125244"></i>
-			<!-- New York City -->
-			<i class="icon-marker" data-lat="40.712784" data-lng="-74.005941"></i>
-			<!-- Duluth -->
-			<i class="icon-marker" data-lat="46.796299" data-lng="-92.103882"></i>
-			<!-- Victoria, Canada -->
-			<i class="icon-marker" data-lat="48.451066" data-lng="-123.376465"></i>
-			<!-- South Padre Island -->
-			<i class="icon-marker" data-lat="26.058017" data-lng="-97.292175"></i>			 
-			<!-- SVG Map -->
-			<img class="icon-map " src="assets/usmap-mcp.svg" alt="United States of America - map">
-		</div>					
-	</div>
-	
-	<script type="text/javascript" src="js/usMap.js"></script>
+  <body>
+    <div class="Map">
+      <div id="map-container" class="map-container">
+        <!-- New Orleans -->
+        <i class="icon-marker" data-lat="29.9510658" data-lng="-90.0715323"></i>
+        <!-- Miami -->
+        <i class="icon-marker" data-lat="25.775161" data-lng="-80.211182"></i>
+        <!-- Provo Utah -->
+        <i class="icon-marker" data-lat="40.245992" data-lng="-111.697998"></i>
+        <!-- 4 corners -->
+        <i class="icon-marker" data-lat="37.000359" data-lng="-109.050293"></i>
 
-</body>
+        <!-- San Diego -->
+        <i class="icon-marker" data-lat="32.583849" data-lng="-117.125244"></i>
+        <!-- New York City -->
+        <i class="icon-marker" data-lat="40.712784" data-lng="-74.005941"></i>
+        <!-- Duluth -->
+        <i class="icon-marker" data-lat="46.796299" data-lng="-92.103882"></i>
+
+        <!-- South Padre Island -->
+        <i class="icon-marker" data-lat="26.058017" data-lng="-97.292175"></i>
+        <!-- Three Corners -->
+        <i class="icon-marker" data-lat="45.945306" data-lng="-104.048948"></i>
+        <!-- Northernmost Point in Washington -->
+        <i
+          class="icon-marker"
+          data-lat="48.3676678"
+          data-lng="-124.7280577"
+        ></i>
+        <!-- Southernmost Point in Florida -->
+        <i class="icon-marker" data-lat="24.513336" data-lng="-81.796667"></i>
+
+        <!-- SVG Map -->
+        <img
+          class="icon-map"
+          src="assets/usmap-mcp.svg"
+          alt="United States of America - map"
+        />
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/usMap.js"></script>
+  </body>
 </html>
